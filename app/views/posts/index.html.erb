@@ -1,5 +1,9 @@
 <h1>投稿一覧</h1>
+
+<%= link_to 'new', new_post_path %>
+
 <% @posts.each do |post| %>
-<p>旅行先</p>
-<span><%= link_to post.location, post_path(post) %></span>
+    <p>旅行先</p>
+    <%= post.id %>
+    <span><%= link_to post.location, post_path(post) %></span>
 <% end %>

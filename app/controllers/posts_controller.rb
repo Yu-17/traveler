@@ -31,7 +31,10 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     post.destroy
-    redirect_to posts_path
+    respond_to do |format|
+      format.html { redirect_to posts_path, notice: "Task was successfully destroyed.", status: :see_other }
+      format.json { head :no_content }
+    end
   end
 
 

@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   get 'top' => 'homes#top'
-  resources :posts
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  #delete 'posts/:id' => 'posts#destroy'
+  resources :posts, only:[:index, :new, :show, :edit, :update, :destroy, :create]
 end
