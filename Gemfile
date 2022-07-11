@@ -73,3 +73,5 @@ group :test do
 end
 
 gem 'pry-rails'
+
+"gem 'sprockets-rails', '2.3.3'" 
